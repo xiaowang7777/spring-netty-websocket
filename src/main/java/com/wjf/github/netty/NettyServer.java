@@ -58,7 +58,9 @@ public class NettyServer {
 						}
 					});
 			ChannelFuture channelFuture = bootstrap.bind(properties.getNettyPort()).sync();
+
 			log.info("server bind port {} successfully! ",properties.getNettyPort());
+			
 			channelFuture.channel().closeFuture().sync();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
