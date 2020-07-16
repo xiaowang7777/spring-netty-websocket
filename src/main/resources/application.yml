@@ -1,0 +1,8 @@
+server:
+    port: 8082
+
+project:
+    netty-port: 8083
+    netty-server-boss-thread-count: 1
+    netty-server-work-thread-count: 10
+    netty-server-last-path: /websocket
