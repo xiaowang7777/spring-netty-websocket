@@ -86,6 +86,8 @@ public class WebSocketHandler extends SimpleChannelInboundHandler<Object> {
 			return;
 		}
 
+		//http请求升级为ws
+
 		WebSocketServerHandshakerFactory handshakerFactory = new WebSocketServerHandshakerFactory(getLocation(request), null, false);
 
 		handshaker = handshakerFactory.newHandshaker(request);
